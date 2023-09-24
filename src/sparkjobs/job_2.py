@@ -87,7 +87,7 @@ def load(df: DataFrame) -> None:
         df (_type_): _description_
     """
     df.show()
-    df.write.format("parquet").mode("overwrite").save("./output/")
+    df.write.format("parquet").mode("overwrite").save(f"./output/{APPNAME}/")
 
 
 def run_job() -> None:
