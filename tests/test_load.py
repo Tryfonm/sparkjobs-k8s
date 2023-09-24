@@ -1,5 +1,5 @@
 import os
-from spark_template.main import spark_manager, load
+from sparkjobs.job_1 import spark_manager, load
 
 
 def test_load():

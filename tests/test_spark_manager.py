@@ -1,4 +1,4 @@
-from spark_template.main import spark_manager
+from sparkjobs.job_1 import spark_manager
 from pyspark.sql import SparkSession
 
 APPNAME = "mySimpleApp"

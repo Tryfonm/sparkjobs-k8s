@@ -5,10 +5,10 @@ from typing import Generator
 from pyspark.sql import SparkSession, DataFrame
 from pyspark.sql.functions import col, desc, avg, concat, lit, rand
 
-from spark_template.logger import get_logger
+from sparkjobs.logger import get_logger
 
 ENV = os.getenv("ENV", "dev")
-APPNAME = "mySimleApp"
+APPNAME = "job1"
 LOGGER = get_logger(APPNAME)
 
 

@@ -1,4 +1,4 @@
-from spark_template.main import spark_manager, extract
+from sparkjobs.job_1 import spark_manager, extract
 
 
 def test_extract():
