@@ -8,7 +8,7 @@ from pyspark.sql.functions import col, desc, avg, concat, lit, rand
 
 
 ENV = os.getenv("ENV", "dev")
-APPNAME = "job_2"
+APPNAME = "job_3"
 
 logging.basicConfig(
     level=logging.INFO,

@@ -8,7 +8,7 @@ from pyspark.sql.functions import col, desc, avg, concat, lit, rand
 
 
 ENV = os.getenv("ENV", "dev")
-APPNAME = "job1"
+APPNAME = "job_1"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -87,7 +87,7 @@ def load(df: DataFrame) -> None:
         df (_type_): _description_
     """
     df.show()
-    df.write.format("parquet").mode("overwrite").save(f"./output/{APPNAME}/")
+    df.write.format("parquet").mode("overwrite").save(f"/shared/output/{APPNAME}/")
 
 
 def run_job() -> None:
