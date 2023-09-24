@@ -1,11 +1,11 @@
-name: Check for New Files in /src/sparkjobs/
+name: detect-new-jobs in /src/sparkjobs/
 on:
   push:
     paths:
       - 'src/sparkjobs/**'
 
 jobs:
-  check-new-files:
+  detect-new-jobs:
     runs-on: self-hosted
     steps:
       - name: Checkout code
