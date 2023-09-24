@@ -1,15 +1,21 @@
 import os
+import logging
 from contextlib import contextmanager
 from typing import Generator
 
 from pyspark.sql import SparkSession, DataFrame
 from pyspark.sql.functions import col, desc, avg, concat, lit, rand
 
-from sparkjobs.logger import get_logger
 
 ENV = os.getenv("ENV", "dev")
 APPNAME = "job1"
-LOGGER = get_logger(APPNAME)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+LOGGER = logging.getLogger(APPNAME)
 
 
 @contextmanager
@@ -93,4 +99,4 @@ def run_job() -> None:
 
 
 if __name__ == "__main__":
-    run_job() #
+    run_job()  #
