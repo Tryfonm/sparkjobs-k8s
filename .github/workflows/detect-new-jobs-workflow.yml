@@ -1,6 +1,8 @@
 name: detect-new-jobs in /src/sparkjobs/
 on:
   push:
+    branches: 
+      - dev
     paths:
       - 'src/sparkjobs/**'
 
