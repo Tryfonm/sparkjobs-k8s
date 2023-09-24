@@ -1,4 +1,4 @@
-pyspark
+pyspark==3.0.2
 mypy
 flake8==3.9.2
 tox==3.24.3
