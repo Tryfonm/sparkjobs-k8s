@@ -13,4 +13,4 @@ jobs:
 
       - name: List new files
         run: |
-          echo "This runs!!!"
+          kubectl exec -it spark-driver-ss-0 -- ./submit-jobs.sh
