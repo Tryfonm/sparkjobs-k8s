@@ -1,0 +1,16 @@
+name: Check for New Files in /src/sparkjobs/
+on:
+  push:
+    paths:
+      - 'src/sparkjobs/**'
+
+jobs:
+  check-new-files:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: List new files
+        run: |
+          echo "This runs!!!"
